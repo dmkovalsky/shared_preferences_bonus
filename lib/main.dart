@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences_bonus/home_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -10,32 +11,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: Text('Shared Preferences Bonus Task')),
-        body: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.all(16),
-            child: Center(
-              child: Column(
-                spacing: 16,
-                children: [
-                  TextFormField(
-                    decoration: InputDecoration(
-                      labelText: 'Benutzername',
-                      hintText: 'Geben Sie Ihren Benutzernamen ein',
-                      border: OutlineInputBorder(),
-                    ),
-                  ),
-                  FilledButton(
-                    onPressed: () {},
-                    child: Text('Speichern'),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
-      ),
+      home: HomeScreen(),
     );
   }
 }
